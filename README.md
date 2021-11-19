@@ -1,5 +1,5 @@
 # JavaFX-Kalender
-Calender for Holidays and Projects made with JavaFx
+Calendar for Holidays and Projects made with JavaFx
 
 Windows installation
 1. Install Java 12
