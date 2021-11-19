@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="1295.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.mathes.FXMLController">
+   <children>
+      <SplitPane dividerPositions="0.5, 0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <VBox fx:id="pnl_left" maxWidth="340.0" minWidth="340.0" prefHeight="200.0" prefWidth="340.0">
+               <children>
+                  <HBox prefHeight="16.0" prefWidth="340.0">
+                     <children>
+                        <Label alignment="CENTER" maxWidth="340.0" prefHeight="36.0" prefWidth="283.0" style="-fx-font-size: 30;" text="Benutzer" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btn_leftPaneClose" mnemonicParsing="false" onAction="#handleLeftPaneClose" prefHeight="36.0" prefWidth="36.0" />
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="pnl_benutzer" />
+                     </content>
+                  </ScrollPane>
+                  <HBox prefHeight="36.0" prefWidth="340.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAlleBenutzerAuswaehlen" prefHeight="36.0" prefWidth="340.0" text="Benutzer auswählen" />
+                        <Button mnemonicParsing="false" onAction="#handleAlleBenutzerAbwaehlen" prefHeight="36.0" prefWidth="340.0" text="Benutzer abwählen" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="36.0" prefWidth="340.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAllenUrlaubAuswaehlen" prefHeight="36.0" prefWidth="340.0" text="Urlaub auswählen" />
+                        <Button mnemonicParsing="false" onAction="#handleAllenUrlaubAbwaehlen" prefHeight="36.0" prefWidth="340.0" text="Urlaub abwählen" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#handleBenutzerHinzufuegen" prefHeight="36.0" prefWidth="340.0" text="+ Benutzer hinzufügen" />
+                  <Button mnemonicParsing="false" onAction="#handleBenutzerZuProjektHinzufuegen" prefHeight="36.0" prefWidth="340.0" text="+ Benutzer zu Projekt hinzufügen" />
+               </children>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Button fx:id="btn_leftPaneOpen" minWidth="36.0" mnemonicParsing="false" onAction="#handleLeftPaneOpen" prefHeight="36.0" prefWidth="36.0" />
+                        <Region maxWidth="36.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <Button fx:id="btn_MonthBevor" minWidth="36.0" mnemonicParsing="false" onAction="#handleMonthBefore" prefHeight="36.0" prefWidth="36.0" />
+                        <Button fx:id="btn_WeekBevor" minWidth="36.0" mnemonicParsing="false" onAction="#handleWeekBefore" prefHeight="36.0" prefWidth="36.0" />
+                        <Button fx:id="btn_DayToday" minWidth="36.0" mnemonicParsing="false" onAction="#handleDayToday" prefHeight="36.0" prefWidth="36.0" />
+                        <Button fx:id="btn_WeekAfter" minWidth="36.0" mnemonicParsing="false" onAction="#handleWeekAfter" prefHeight="36.0" prefWidth="36.0" />
+                        <Button fx:id="btn_MonthAfter" alignment="BOTTOM_LEFT" minWidth="36.0" mnemonicParsing="false" onAction="#handleMonthAfter" prefHeight="36.0" prefWidth="36.0" />
+                        <Region maxWidth="36.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <GridPane fx:id="pnl_grid01" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+                  <Button fx:id="btn_rightPaneOpen" minWidth="36.0" mnemonicParsing="false" onAction="#handleRightPaneOpen" prefHeight="36.0" prefWidth="36.0" />
+               </children>
+            </HBox>
+            <VBox fx:id="pnl_right" maxWidth="320.0" minWidth="320.0" prefHeight="200.0" prefWidth="320.0">
+               <children>
+                  <HBox prefHeight="22.0" prefWidth="320.0">
+                     <children>
+                        <Button fx:id="btn_rightPaneClose" minWidth="36.0" mnemonicParsing="false" onAction="#handleRightPaneClose" prefHeight="36.0" prefWidth="36.0" />
+                        <Label alignment="CENTER" maxWidth="320.0" prefWidth="320.0" style="-fx-font-size: 30;" text="Projekte" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="pnl_projekte" />
+                     </content>
+                  </ScrollPane>
+                  <VBox fx:id="pnl_benutzer1" />
+                  <HBox prefHeight="36.0" prefWidth="340.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAlleProjekteAuswaehlen" prefHeight="36.0" prefWidth="340.0" text="Projekte auswählen" />
+                        <Button mnemonicParsing="false" onAction="#handleAlleProjekteAbwaehlen" prefHeight="36.0" prefWidth="340.0" text="Projekte abwählen" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#handleProjektHinzufuegen" prefHeight="36.0" prefWidth="320.0" text="+ Projekt hinzufügen" />
+                  <Button mnemonicParsing="false" onAction="#handleUrlaubHinzufuegen" prefHeight="36.0" prefWidth="320.0" text="+ Urlaub hinzufügen" />
+                  <HBox prefHeight="36.0" prefWidth="340.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="340.0" text="Projekte auflisten" />
+                        <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="340.0" text="Urlaub auflisten" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

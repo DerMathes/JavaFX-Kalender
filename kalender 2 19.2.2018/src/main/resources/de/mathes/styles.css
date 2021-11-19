@@ -1,0 +1,21 @@
+.padding-1 {
+    -fx-padding: 1px;
+}
+.padding-2 {
+    -fx-padding: 2px;
+}
+.padding-3 {
+    -fx-padding: 3px;
+}
+
+.border_leftright {
+    -fx-border-width: 0 0 0 2;
+}
+
+.border_leftrightbottom {
+    -fx-border-width: 0 0 2 2 !important;
+}
+
+.border_black {
+    -fx-border-color: black;
+}
